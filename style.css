@@ -1,4 +1,6 @@
-.box{
+/* POSITION ABSOLUTE  */
+
+/* .box{
     position: relative;
     width: 800px;
     height: 600px;
@@ -13,9 +15,9 @@
     position: absolute;
     left: 20px;
     bottom: 50px;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
 
     width: 500px;
     height: 400px;
@@ -33,4 +35,32 @@ button{
     position: absolute;
     top: 50px;
     left: 50px;
+} */
+
+/* POSITION FIXED */
+
+:root{
+    --header-height: 70px;
+}
+
+body{
+    padding-top: var(--header-height);
+}
+
+.page-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: rgb(0, 255, 255);
+    outline: 1px solid black;
+}
+
+.button{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 150px;
+    right: 150px;
 }
