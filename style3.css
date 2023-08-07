@@ -34,7 +34,7 @@
     transform: translateY(-35px);
 }
 
-.btn::after{
+/* .btn::after{
     position: absolute;
     content: '';
     width: 15px;
@@ -45,4 +45,4 @@
 
 .btn:hover::after{
     top: 50%;
-}
+} */
