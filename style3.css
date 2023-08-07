@@ -1,0 +1,48 @@
+.btn{
+    position: relative;
+    display: inline-flex;
+    margin: 0;
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    overflow: hidden;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus{
+    background-color: brown;
+    color: black;
+}
+
+.btn::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    margin-right: 10px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover::before{
+    transform: translateY(-35px);
+}
+
+.btn::after{
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: blueviolet;
+    transform: translateY(35px);
+}
+
+.btn:hover::after{
+    top: 50%;
+}
