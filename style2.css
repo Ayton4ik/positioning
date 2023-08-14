@@ -7,6 +7,8 @@
     /* bottom: 0;
     right: 0; */
     background-color: rgba(138, 43, 226, 0.5);
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal{
@@ -16,12 +18,35 @@
     background-color: white;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
+    transform: translate(-50%, -50%)
+    scale(1)
+    rotateZ(360deg);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
     padding: 15px;
+}
+
+.backdrop.is-hidden .modal{
+    transform: scale(1.1)
+    translate(-50%, -50%)
+    rotateZ(0deg);
 }
 
 .backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
+}
+
+.scene {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #1976d2;  
+}
+
+.box {
+    height: 100%;
+    background-color: #e91e63;
+    background-image: url('../images/smile.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
 }
