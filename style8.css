@@ -1,0 +1,46 @@
+@keyframes white-circle{
+    0%{
+        left: 0;
+    }
+    25%{
+        left: 100%;
+        top: 0;
+        background-color: blue;
+    }
+    50%{
+        top: 100%;
+        left: 100%;
+    }
+    75%{
+        left: 0;
+        top: 100%;
+        background-color: brown;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+.content{
+    margin-top: 100px;
+    width: 500px;
+    height: 500px;
+    background-color: lightcoral;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}
+
+.content-circle{
+    position: relative;
+    transform: translate(-75%, -75%);
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 50%;
+
+    /* Анімація */
+
+    animation: white-circle 4000ms linear infinite;
+}
